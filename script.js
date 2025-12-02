@@ -58,7 +58,9 @@ function playGame(){
 
   if(playerScore > comScore) console.log("You win the match!");
   else if(playerScore < comScore) console.log("You lose the match!");
-  else console.log("The result of the match is a tie!");
+  else console.log(`The result of the match is a tie!`);
+
+  console.log(`Player ${playerScore} - Com ${comScore}`);
 }
 
 playGame();
