@@ -12,5 +12,28 @@ function getPlayerChoice(){
   return playerMove;
 }
 
-console.log(getPlayerChoice());
-console.log(getComChoice());
+function playRound(playerChoice, comChoice){
+  let newPlayerChoice = playerChoice.toLowerCase();
+
+  console.log(`Player choice: ${newPlayerChoice}`);
+  console.log(`Com choice: ${comChoice}`);
+
+  if( (newPlayerChoice === "rock" && comChoice == "scissor")
+    || (newPlayerChoice === "paper" && comChoice == "rock")
+    || (newPlayerChoice === "scissor" && comChoice == "paper") )
+    console.log("You win!");
+  else if( (comChoice === "rock" && playenewPlayerChoicerChoice == "scissor")
+    || (comChoice === "paper" && newPlayerChoice == "rock")
+    || (comChoice === "scissor" && newPlayerChoice == "paper") )
+    console.log("You lose!");
+  else
+    console.log("It's a tie!");
+}
+
+let playerChoice = getPlayerChoice();
+let comChoice = getComChoice();
+
+let playerScore = 0;
+let comScore = 0;
+
+playRound(playerChoice, comChoice);
