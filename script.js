@@ -48,10 +48,10 @@ function playGame(){
   let roundResult = 0;
 
   for(i=0; i<5; i++){
+    console.log(`Round ${i+1}`);
     let playerChoice = getPlayerChoice();
     let comChoice = getComChoice();
     roundResult = playRound(playerChoice, comChoice);
-    console.log(roundResult);
     if(roundResult === 1) playerScore++;
     else if(roundResult === 0) comScore++;
   }
