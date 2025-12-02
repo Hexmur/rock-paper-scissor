@@ -41,10 +41,16 @@ function playRound(playerChoice, comChoice){
   return result;
 }
 
-let playerChoice = getPlayerChoice();
-let comChoice = getComChoice();
+function playGame(){
 
-let playerScore = 0;
-let comScore = 0;
+  let playerScore = 0;
+  let comScore = 0;
 
-console.log(playRound(playerChoice, comChoice));
+  for(i=0; i<5; i++){
+    let playerChoice = getPlayerChoice();
+    let comChoice = getComChoice();
+    console.log(playRound(playerChoice, comChoice));
+  }
+}
+
+playGame();
