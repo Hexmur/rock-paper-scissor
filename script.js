@@ -45,12 +45,20 @@ function playGame(){
 
   let playerScore = 0;
   let comScore = 0;
+  let roundResult = 0;
 
   for(i=0; i<5; i++){
     let playerChoice = getPlayerChoice();
     let comChoice = getComChoice();
-    console.log(playRound(playerChoice, comChoice));
+    roundResult = playRound(playerChoice, comChoice);
+    console.log(roundResult);
+    if(roundResult === 1) playerScore++;
+    else if(roundResult === 0) comScore++;
   }
+
+  if(playerScore > comScore) console.log("You win the match!");
+  else if(playerScore < comScore) console.log("You lose the match!");
+  else console.log("The result of the match is a tie!");
 }
 
 playGame();
