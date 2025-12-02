@@ -1,2 +1,2 @@
 # rock-paper-scissor
-This is the Browser game of Rock Paper Scissor
+This is Rock Paper Scissor implemented in JavaScript. This game is played via the console.
